@@ -15,8 +15,8 @@ function App() {
   return (
     <div className="App">
       <Dashbord>
-        {/* <DataCenter2>
-        <DataCenter3> */}
+         <DataCenter2>
+        <DataCenter3> 
         <Router>
           <Dashbss/>
           <Switch>
@@ -26,8 +26,8 @@ function App() {
            <Route exact path="/addprofile" component={Addprofile}/> 
           </Switch>
         </Router>
-        {/* </DataCenter3>
-        </DataCenter2> */}
+         </DataCenter3>
+        </DataCenter2> 
         </Dashbord>
     </div>
   );
