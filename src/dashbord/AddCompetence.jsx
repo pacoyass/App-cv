@@ -1,8 +1,9 @@
 import React from 'react'
-
+import './Dash.css';
 export default function AddCompetence() {
     return (
-        <div className="form-group container w-50">
+      
+        <div   className="form-group container w-50">
 
     <h2 className="form-group ml-10">Add Competence </h2>
 <div className="form-group ">
@@ -29,7 +30,7 @@ export default function AddCompetence() {
 </div>
 
 
-<div className="form-group">
+<div className="form-group ">
  
   <input type="submit" className="form-control bg-danger" />
 

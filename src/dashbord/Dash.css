@@ -2,6 +2,10 @@ a:focus,a:hover,a{
     outline:none;
     text-decoration: none;
 }
+.divc{
+    margin-bottom:-100%;
+}
+
 li,ul{
     list-style: none;
     padding: 0;
@@ -105,12 +109,12 @@ li,ul{
     border-style: none none solid;
     border-width: medium medium 1px;
     font-size: 13px;
-    font-weight: 300;
-    width: 100%;
+    
+     
     color: #8492af;
     padding: 15px 50px;
     font-size: 17px;
-    max-width: 550px;
+    
 }
 
 .login-form label {
@@ -175,10 +179,7 @@ li,ul{
 
 
 /*Home Page*/
-
-.home {
-    background: #f6f7fa;
-}
+ 
 
 #navigation {
     background: #0e1a35;
@@ -752,7 +753,7 @@ header {
   .contact-grid {
     text-align: center;
     justify-content: center;
-    width: 80%;
+    width: 10%;
     height: 550px;
     background: white;
     color: black;

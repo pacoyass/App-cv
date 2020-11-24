@@ -6,28 +6,32 @@ import AddExperience from './dashbord/AddExperience';
 import Addformation from './dashbord/Addformation';
 import Addloisirs from './dashbord/Addloisirs';
 import Addprofile from './dashbord/Addprofile';
-import { Dashbord } from './ContextApi/Dashbord';
-import Menu from './dashbord/Menu'
+ 
+ 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AddCompetence from './dashbord/AddCompetence';
+import Menu from './dashbord/Menu';
+ 
 
 
 
 function App() {
   return (
     <div className="App">
-      <Dashbord>
+      {/* <Dashbord> */}
         <Router>
+        <Menu/>
           <Switch>
+        
            <Route exact path="/AddExperience" component={AddExperience}/> 
            <Route exact path="/Addformation" component={Addformation}/>  
            <Route exact path="/Addloisir" component={Addloisirs}/> 
            <Route exact path="/Addprofile" component={Addprofile}/> 
            <Route exact path="/AddCompetence" component={AddCompetence}/> 
-           <Route exact path="/dashbord" component={Menu}/>
+             
            </Switch>
         </Router>
-        </Dashbord>
+        {/* </Dashbord> */}
     </div>
   );
 }
