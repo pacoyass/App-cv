@@ -1,34 +1,40 @@
 import React from 'react'
 import {BrowserRouter as Router,Switch,Route}from 'react-router-dom'
-import { DataCenter } from './ContextApi/DataCenter'
 import AddExperience from './dashbord/AddExperience';
 import Addformation from './dashbord/Addformation';
 import Addloisirs from './dashbord/Addloisirs';
 import Addprofile from './dashbord/Addprofile';
-import { Dashbord } from './ContextApi/Dashbord';
+import { Datacenter1 } from './ContextApi/Datacenter1';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Dashbss from './dashrss/Dashbss';
+import Menu from './dashrss/Menu'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Datacenter2} from './ContextApi/Datacenter2';
+import {Datacenter3} from './ContextApi/Datacenter3';
+
 
 
 
 function App() {
   return (
     <div className="App">
-      <Dashbord>
-         <DataCenter2>
-        <DataCenter3> 
+      <Datacenter1>
+       
+         <Datacenter2>
+        <Datacenter3> 
         <Router>
-          <Dashbss/>
+           <Menu/>
           <Switch>
+           
            <Route exact path="/addexperience" component={AddExperience}/> 
            <Route exact path="/addformation" component={Addformation}/>  
            <Route exact path="/addloisir" component={Addloisirs}/> 
            <Route exact path="/addprofile" component={Addprofile}/> 
+  
           </Switch>
         </Router>
-         </DataCenter3>
-        </DataCenter2> 
-        </Dashbord>
+         </Datacenter3>
+        </Datacenter2> 
+        </Datacenter1>
     </div>
   );
 }
