@@ -8,7 +8,7 @@ import { Datacenter1 } from './ContextApi/formation crud/Datacenter1';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Menu from './dashbord/Menu'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Datacenter2} from './ContextApi/profile crud/Datacenter2';
+import {Datacenter2} from './ContextApi/experience crud/Datacenter2';
 import {Datacenter3} from './ContextApi/compétence crud/Datacenter3';
 import AddCompetence from './dashbord/AddCompetence';
 import './App.css'
