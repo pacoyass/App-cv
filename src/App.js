@@ -1,11 +1,15 @@
 import React from 'react'
 import {BrowserRouter as Router,Switch,Route}from 'react-router-dom'
+
 import { DataCenter } from './ContextApi/DataCenter'
 import AddExperience from './dashbord/AddExperience';
 import Addformation from './dashbord/Addformation';
 import Addloisirs from './dashbord/Addloisirs';
 import Addprofile from './dashbord/Addprofile';
 import { Dashbord } from './ContextApi/Dashbord';
+import Menu from './dashbord/Menu'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import AddCompetence from './dashbord/AddCompetence';
 
 
 
@@ -15,11 +19,13 @@ function App() {
       <Dashbord>
         <Router>
           <Switch>
-           <Route exact path="/addexperience" component={AddExperience}/> 
-           <Route exact path="/addformation" component={Addformation}/>  
-           <Route exact path="/addloisir" component={Addloisirs}/> 
-           <Route exact path="/addprofile" component={Addprofile}/> 
-          </Switch>
+           <Route exact path="/AddExperience" component={AddExperience}/> 
+           <Route exact path="/Addformation" component={Addformation}/>  
+           <Route exact path="/Addloisir" component={Addloisirs}/> 
+           <Route exact path="/Addprofile" component={Addprofile}/> 
+           <Route exact path="/AddCompetence" component={AddCompetence}/> 
+           <Route exact path="/dashbord" component={Menu}/>
+           </Switch>
         </Router>
         </Dashbord>
     </div>

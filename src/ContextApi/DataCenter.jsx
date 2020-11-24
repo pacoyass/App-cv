@@ -1,5 +1,8 @@
-import React, { createContext } from 'react'
-export const Context=createContext()
+import React  from 'react'
+ 
+
+  
+
 export  function DataCenter() {
     return (
         <div>

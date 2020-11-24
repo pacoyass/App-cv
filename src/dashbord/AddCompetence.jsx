@@ -1,14 +1,10 @@
 import React from 'react'
-        
 
-export default function Addformation() {
-
-
-
+export default function AddCompetence() {
     return (
-<div className="form-group container w-50">
+        <div className="form-group container w-50">
 
-    <h2 className="form-group ">Add Formation </h2>
+    <h2 className="form-group ml-10">Add Competence </h2>
 <div className="form-group ">
   <label />Titre
   <input type="text" className="form-control" id="usr"/>
@@ -35,7 +31,7 @@ export default function Addformation() {
 
 <div className="form-group">
  
-  <input type="submit" className="form-control bg-primary" />
+  <input type="submit" className="form-control bg-danger" />
 
 </div>
 
