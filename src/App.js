@@ -1,14 +1,15 @@
 import React from 'react'
 import {BrowserRouter as Router,Switch,Route}from 'react-router-dom'
-
-import { DataCenter } from './ContextApi/DataCenter'
 import AddExperience from './dashbord/AddExperience';
 import Addformation from './dashbord/Addformation';
 import Addloisirs from './dashbord/Addloisirs';
 import Addprofile from './dashbord/Addprofile';
-import { Dashbord } from './ContextApi/Dashbord';
+import { Datacenter1 } from './ContextApi/formation crud/Datacenter1';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import Menu from './dashbord/Menu'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Datacenter2} from './ContextApi/profile crud/Datacenter2';
+import {Datacenter3} from './ContextApi/compétence crud/Datacenter3';
 import AddCompetence from './dashbord/AddCompetence';
 import './App.css'
 
@@ -16,12 +17,16 @@ import './App.css'
 
 function App() {
   return (
+    <div className="App  ">
+     
 
+      
     
-    
-    
-      <div className="App">
-    <Dashbord>
+      
+      <Datacenter1>
+       
+         <Datacenter2>
+        <Datacenter3> 
         <Router>
           <Menu/>
           <Switch>
@@ -31,10 +36,13 @@ function App() {
            <Route exact path="/Addprofile" component={Addprofile}/> 
            <Route exact path="/AddCompetence" component={AddCompetence}/> 
            </Switch>
-          
         </Router>
-        </Dashbord>
+         </Datacenter3>
+        </Datacenter2> 
+        </Datacenter1>
     </div>
+    
+    
    
   );
 }
