@@ -4,7 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
-APP-CV/src/firebase
+.env.local
 
 # testing
 /coverage
