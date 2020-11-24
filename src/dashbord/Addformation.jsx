@@ -6,39 +6,24 @@ export default function Addformation() {
 
 
     return (
-<div className="form-group container w-50">
+        <div className="form-group col-md-6 offset-3 losire">
 
-    <h2 className="form-group ">Add Formation </h2>
-<div className="form-group ">
-  <label />Titre
-  <input type="text" className="form-control" id="usr"/>
-</div>
+        <h2 className="form-group  ml-10">Add Formation </h2>
+     <label />Titre
+     <input type="text" className="form-control" id="usr"/>
 
-<div className="form-group">
-  <label/>Ecole
-  <input type="text" className="form-control" />
-</div>
+     <label/>Ecole
+     <input type="text" className="form-control" />
 
+     <label/>Date
+     <input type="date" className="form-control" /> 
 
-<div className="form-group">
-  <label/>Date
-  <input type="text" className="form-control" />
-</div>
+     <label/>Spécialité
+     <input type="text" className="form-control " />
+
+     <input type="submit" className="form-control bg-warning" />
 
 
-<div className="form-group">
-  <label/>Spécialité
-  <input type="text" className="form-control " />
-
-</div>
-
-
-<div className="form-group">
- 
-  <input type="submit" className="form-control bg-primary" />
-
-</div>
-
-   </div>
+  </div>
     )
 }

@@ -10,25 +10,30 @@ export default function Addprofile() {
 
 
     <div className="form-group ">
-      <label />Titre
+      <label />Nom
       <input type="text" className="form-control" id="usr"/>
     </div>
     
     <div className="form-group">
-      <label/>Ecole
+      <label/>Prénom
       <input type="text" className="form-control" />
     </div>
     
     
     <div className="form-group">
-      <label/>Date
-      <input type="text" className="form-control" />
+      <label/>Date de naissance
+      <input type="date" className="form-control" />
     </div>
     
     
     <div className="form-group">
-      <label/>Spécialité
-      <input type="text" className="form-control " />
+      <label/>Email
+      <input type="email" className="form-control " />
+    
+    </div>
+    <div className="form-group">
+      <label/>Téléphone
+      <input type="number" className="form-control " />
     
     </div>
     
