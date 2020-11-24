@@ -4,12 +4,12 @@ import AddExperience from './dashbord/AddExperience';
 import Addformation from './dashbord/Addformation';
 import Addloisirs from './dashbord/Addloisirs';
 import Addprofile from './dashbord/Addprofile';
-import { Datacenter1 } from './ContextApi/Datacenter1';
+import { Datacenter1 } from './ContextApi/formation crud/Datacenter1';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Menu from './dashrss/Menu'
+import Menu from './dashbord/Menu'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Datacenter2} from './ContextApi/Datacenter2';
-import {Datacenter3} from './ContextApi/Datacenter3';
+import {Datacenter2} from './ContextApi/profile crud/Datacenter2';
+import {Datacenter3} from './ContextApi/compétence crud/Datacenter3';
 import AddCompetence from './dashbord/AddCompetence';
 import './App.css'
 
