@@ -1,18 +1,29 @@
 import React from 'react'
+        
 
 export default function Addformation() {
+
+
+
     return (
-        <div>
-        < div className='form-control col-md-6 offset-3 mt-5'>
-        <input  name='name'  type="text" className='form-control'/>
-        <input  name='price'   type="text" className='form-control'/>
-        <input  name='stock_items'  type="text" className='form-control'/>
-        <button className="btn btn-warning ">Update User</button>
-    </div>
-        
-        <div>
-            <h1>hello adformation</h1>
-        </div>
-        </div>
+        <div className="form-group col-md-6 offset-3 losire">
+
+        <h2 className="form-group  ml-10">Add Formation </h2>
+     <label />Titre
+     <input type="text" className="form-control" id="usr"/>
+
+     <label/>Ecole
+     <input type="text" className="form-control" />
+
+     <label/>Date
+     <input type="date" className="form-control" /> 
+
+     <label/>Spécialité
+     <input type="text" className="form-control " />
+
+     <input type="submit" className="form-control bg-warning" />
+
+
+  </div>
     )
 }

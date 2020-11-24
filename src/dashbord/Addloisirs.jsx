@@ -2,8 +2,16 @@ import React from 'react'
 
 export default function Addloisirs() {
     return (
-        <div>
-            <h1>hello from adloisir</h1>
-        </div>
+
+            <div className="form-group col-md-6 offset-3 losire">
+
+                   <h2 className="form-group  ml-10">Add Loisir </h2>
+                <label />Vos loisires
+                <input type="text" className="form-control" id="usr"/>
+
+                <input type="submit" className="form-control bg-warning" />
+
+             </div>
+  
     )
-}
+    }
