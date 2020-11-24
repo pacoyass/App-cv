@@ -11,6 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Datacenter2} from './ContextApi/Datacenter2';
 import {Datacenter3} from './ContextApi/Datacenter3';
 import AddCompetence from './dashbord/AddCompetence';
+import './App.css'
 
 
 
@@ -27,14 +28,13 @@ function App() {
          <Datacenter2>
         <Datacenter3> 
         <Router>
-           <Menu/>
+          <Menu/>
           <Switch>
            <Route exact path="/AddExperience" component={AddExperience}/> 
            <Route exact path="/Addformation" component={Addformation}/>  
            <Route exact path="/Addloisir" component={Addloisirs}/> 
            <Route exact path="/Addprofile" component={Addprofile}/> 
            <Route exact path="/AddCompetence" component={AddCompetence}/> 
-           <Route exact path="/dashbord" component={Menu}/>
            </Switch>
         </Router>
          </Datacenter3>
@@ -43,6 +43,7 @@ function App() {
     </div>
     
     
+   
   );
 }
 

@@ -6,18 +6,18 @@ export default function AddCompetence() {
 
     <h2 className="form-group ml-10">Add Competence </h2>
 <div className="form-group ">
-  <label />Titre
+  <label />Les languages maitrisées
   <input type="text" className="form-control" id="usr"/>
 </div>
 
 <div className="form-group">
-  <label/>Ecole
+  <label/>Compétance technique
   <input type="text" className="form-control" />
 </div>
 
 
 <div className="form-group">
-  <label/>Date
+  <label/>Votre niveau d'etudes
   <input type="text" className="form-control" />
 </div>
 

@@ -7,18 +7,26 @@ export default function AddExperience() {
 
     <h2 className="form-group ml-50">Add Experience </h2>
 <div className="form-group ">
-  <label />Titre
+  <label />Nom de l'Etablissement ou l'Entreprise
   <input type="text" className="form-control" id="usr"/>
 </div>
 
 <div className="form-group">
-  <label/>Ecole
+  <label/>Nombres d'annees 
   <input type="text" className="form-control" />
+</div>
+<div className="form-group">
+  <label/>De  (Sinon champs Vide)
+  <input type="date" className="form-control" />
+</div>
+<div className="form-group">
+  <label/>Jusqu'a (Sinon champs Vide)
+  <input type="date" className="form-control" />
 </div>
 
 
 <div className="form-group">
-  <label/>Date
+  <label/>Quelle secteur
   <input type="text" className="form-control" />
 </div>
 
