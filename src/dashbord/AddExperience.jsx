@@ -22,7 +22,7 @@ export default function AddExperience(props) {
   function sendtodata2(){
      getdt({
      
-        competence:exper.competence,
+        competence:exper.experience,
         formation:exper.formation,
         date:new Date(secdate).toDateString(),
         dates:new Date(sedat).toDateString(),
@@ -39,7 +39,7 @@ export default function AddExperience(props) {
     <h2 className=" form-group text-center text-secondary ">Add Experience </h2>
 <div className="form-group ">
   <label /> <h5 className="text-secondary text-center">Compétence</h5>
-  <input name="competence" onChange={hndlInp} type="text" className="form-control" id="usr"/>
+  <input name="experience" onChange={hndlInp} type="text" className="form-control" id="usr"/>
 </div>
 
 <div className="form-group">

@@ -24,15 +24,21 @@ export  function Datacenter2(props) {
         }
         fetchData();
       }, []);
+       
        function getdt(data){
          // console.log(data);
        db.collection('experience').add(data);
        }
+
+       function deletfromFirebase(id) {
+        db.collection('experience').doc(id).delete();
+      }
     return (
         <div>
             <Context2.Provider value={{
               getdt,
-              profil
+              profil,
+              deletfromFirebase
             }}>
                 {props.children}
             </Context2.Provider>

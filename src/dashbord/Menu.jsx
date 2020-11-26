@@ -1,8 +1,10 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import './Dash.css'
 // import { Grid, Cell } from 'react-mdl';
 import { Link } from 'react-router-dom';
+import { procontext } from '../ContextApi/profile crud/Dataprof';
 export default function Menu() {
+  const {profilees}=useContext(procontext)
     return (
       
       
@@ -19,19 +21,26 @@ export default function Menu() {
             <Link to="/">Dashboard</Link>
           </li>
           <li>
-            <Link to="/AddExperience">AddExperience</Link>
+            <Link to="/AddExperience">Add Experience</Link>
           </li>
           <li>
-            <Link to="/Addformation">Addformation</Link>
+            <Link to="/Addformation">Add Formation</Link>
           </li>
           <li>
-            <Link to="/Addloisir">Addloisirs</Link>
+            <Link to="/Addloisir">Add Loisirs</Link>
           </li>
           <li>
-            <Link to="/Addprofile">Addprofile</Link>
+            {profilees.length==0?
+            <Link to="/Addprofile">Add Profile</Link>
+            :
+            <Link to="/Updateprofile">Update profil</Link>
+            }
           </li>
           <li>
-            <Link to="/AddCompetence">AddCompetence</Link>
+            <Link to="/AddCompetence">Add Competence</Link>
+          </li>
+          <li>
+            <Link to="/Langue">Add language</Link>
           </li>
          
         </ul>

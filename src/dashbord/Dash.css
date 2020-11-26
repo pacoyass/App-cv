@@ -22,10 +22,8 @@
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: #000;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 5%, rgba(32,32,236,1) 61%, rgba(0,212,255,1) 100%); -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
 
@@ -137,5 +135,9 @@
 .ulist .lite:before {
     content: "\25BA \0020";
     color: purple;
+}
+.tit{
+    border:1px solid rgb(127, 175, 242);
+    box-shadow:10px 10px 10px rgb(26, 121, 121)
 }
 }
