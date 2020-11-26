@@ -35,8 +35,8 @@ export default function Updatefromation(props) {
             < div className='col-md-6 offset-3 mt-5'>
          <input onChange={handlInput} name='titre'  defaultValue={user.titre} type="text" className='form-control'/>
          <input onChange={handlInput} name='nomber'  defaultValue={user.nomber} type="text" className='form-control'/>
-         <input onChange={handlInput} name='datedentrer'  defaultValue={user.datedentrer} type="text" className='form-control'/>
-         <input onChange={handlInput} name='datedsortie'  defaultValue={user.datedsortie} type="text" className='form-control'/>
+         <input onChange={handlInput} name='datedentrer'  defaultValue={user.datedentrer} type="date" className='form-control'/>
+         <input onChange={handlInput} name='datedsortie'  defaultValue={user.datedsortie} type="date" className='form-control'/>
          <input onChange={handlInput} name='Diplome'  defaultValue={user.Diplome} type="text" className='form-control'/>
          <button onClick={SendToParent}  className="btn btn-warning ">Update</button>
      </div>
