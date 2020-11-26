@@ -16,6 +16,8 @@ import Langue from './dashbord/Langue';
 import Datacenter4 from './ContextApi/laungue curd/Datacenter4';
 import Datacenter5 from './ContextApi/loisir crud/Datacenter5';
 import Updatefromation from './updates/Updatefromation';
+import Updateloisir from './updates/Updateloisir';
+import Updatelangue from './updates/Updatelangue';
 
 
 
@@ -44,7 +46,9 @@ function App() {
            <Route exact path="/Addprofile" component={Addprofile}/> 
            <Route exact path="/AddCompetence" component={AddCompetence}/> 
            <Route exact path="/Langue" component={Langue}/> 
-           <Route exact path="/update/:id" component={Updatefromation}/> 
+           <Route exact path="/updateformation/:id" component={Updatefromation}/> 
+           <Route exact path="/updateloisir/:id" component={Updateloisir}/>
+           <Route exact path="/updatelangue/:id" component={Updatelangue}/> 
            
            </Switch>
         </Router>
