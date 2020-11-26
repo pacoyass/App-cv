@@ -46,19 +46,22 @@ export default function Menu() {
             <Link to="/">Dashboard</Link>
           </li>
           <li>
-            <Link to="/AddExperience">AddExperience</Link>
+            <Link to="/AddExperience">Add Experience</Link>
           </li>
           <li>
-            <Link to="/Addformation">Addformation</Link>
+            <Link to="/Addformation">Add Formation</Link>
           </li>
           <li>
-            <Link to="/Addloisir">Addloisirs</Link>
+            <Link to="/Addloisir">Add Loisirs</Link>
           </li>
           <li>
-            <Link to="/Addprofile">Addprofile</Link>
+            <Link to="/Addprofile">Add Profile</Link>
           </li>
           <li>
-            <Link to="/AddCompetence">AddCompetence</Link>
+            <Link to="/AddCompetence">Add Competence</Link>
+          </li>
+          <li>
+            <Link to="/Langue">Add language</Link>
           </li>
          
         </ul>

@@ -4,6 +4,11 @@
 /node_modules
 /.pnp
 .pnp.js
+<<<<<<< HEAD
+/src/firebase
+=======
+.env.local
+>>>>>>> d8561d546a716a54e00fc59dc1e64ed1b7411c80
 
 # testing
 /coverage

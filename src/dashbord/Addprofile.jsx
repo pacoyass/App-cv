@@ -36,15 +36,34 @@ export default function Addprofile() {
       <input type="number" className="form-control " />
     
     </div>
+    <div className="form-group">
+      <label/>Spécialité
+      <input type="number" className="form-control " />
     
+    </div>
+    <div className="col-md-6 mb-4">
+        <form className="md-form">
+          <div className="file-field">
+            <div className="mb-4">
+             
+            </div>
+            <div className="d-flex justify-content-center">
+              <div className="  form-group">
+               
+                <input className="form-control " type="file" />
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
     
     <div className="form-group">
      
-      <input type="submit" className="form-control bg-dark" />
+    <button type="submit" className="form-control bg-danger" >Ajouter</button>
     
     </div>
     
-
+    
     
        </div>
     )

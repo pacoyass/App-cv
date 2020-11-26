@@ -6,7 +6,7 @@ export const Context3=createContext()
 
 export  function Datacenter3(props) {
 
-    const [comps,setcomps]=useState([]);
+    const [comps,setcomps]=useState({});
 
 
     useEffect(() =>{
@@ -34,15 +34,9 @@ export  function Datacenter3(props) {
          db.collection('competences').add(compe)
         console.log(compe)
     }
-
-    function deletefb(id){
-        db.collection('competences').doc(id).delete()
-       }
-
-
     return (
         <div>
-            <Context3.Provider value={{addcomp,comps,deletefb}}>
+            <Context3.Provider value={{addcomp,comps}}>
                 {props.children}
             </Context3.Provider>
         </div>
