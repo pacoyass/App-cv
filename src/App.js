@@ -12,6 +12,9 @@ import {Datacenter2} from './ContextApi/experience crud/Datacenter2';
 import {Datacenter3} from './ContextApi/compétence crud/Datacenter3';
 import AddCompetence from './dashbord/AddCompetence';
 import './App.css'
+import Langue from './dashbord/Langue';
+import Datacenter4 from './ContextApi/laungue curd/Datacenter4';
+import Datacenter5 from './ContextApi/loisir crud/Datacenter5';
 
 
 
@@ -27,6 +30,8 @@ function App() {
        
          <Datacenter2>
         <Datacenter3> 
+          <Datacenter4>
+            <Datacenter5>
         <Router>
           <Menu/>
           <Switch>
@@ -35,8 +40,11 @@ function App() {
            <Route exact path="/Addloisir" component={Addloisirs}/> 
            <Route exact path="/Addprofile" component={Addprofile}/> 
            <Route exact path="/AddCompetence" component={AddCompetence}/> 
+           <Route exact path="/Langue" component={Langue}/> 
            </Switch>
         </Router>
+        </Datacenter5>
+        </Datacenter4>
          </Datacenter3>
         </Datacenter2> 
         </Datacenter1>

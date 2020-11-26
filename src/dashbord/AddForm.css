@@ -1,0 +1,14 @@
+h2{
+  font-family: 'sans';  
+}
+@font-face{
+    font-family: "sans";
+    src: url('RobotoSlab-VariableFont_wght.ttf');
+}
+label{
+    font-family: 'sans'; 
+}
+
+td{
+  font-family: 'sans'; 
+}
