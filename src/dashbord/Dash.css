@@ -117,5 +117,25 @@
     #wrapper.toggled #page-content-wrapper {
         position: relative;
         margin-right: 0;
+ 
     }
+.bodyex{
+    background-color: rgb(167, 200, 202);
+    box-sizing: border-box;
+    box-shadow:10px 10px 10px rgb(26, 121, 121);
+   
+   
+}
+
+.inif{
+    padding: 18px;
+     
+}
+.ulist{
+    list-style: none;
+}
+.ulist .lite:before {
+    content: "\25BA \0020";
+    color: purple;
+}
 }

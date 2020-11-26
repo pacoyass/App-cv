@@ -12,6 +12,8 @@ import {Datacenter2} from './ContextApi/experience crud/Datacenter2';
 import {Datacenter3} from './ContextApi/compétence crud/Datacenter3';
 import AddCompetence from './dashbord/AddCompetence';
 import './App.css'
+import Dashb from './dashbord/Dashb';
+
 
 
 
@@ -30,6 +32,7 @@ function App() {
         <Router>
           <Menu/>
           <Switch>
+          <Route exact path="/" component={Dashb}/>
            <Route exact path="/AddExperience" component={AddExperience}/> 
            <Route exact path="/Addformation" component={Addformation}/>  
            <Route exact path="/Addloisir" component={Addloisirs}/> 
