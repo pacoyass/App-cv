@@ -27,6 +27,21 @@ export  function Datacenter1 (props) {
 function deletefromFirebase(id){
        db.collection('formations').doc(id).delete()
        }
+
+function updadatefroma(id,user){
+    db.collection('formations').doc(id).update(user)
+}
+
+
+
+
+
+
+
+
+
+
+
 return (
 
         <div>
@@ -34,6 +49,7 @@ return (
                <dashcontext.Provider value={{formations,
                    addformation,
                    deletefromFirebase,
+                   updadatefroma,
                }}>
                    {props.children}
                </dashcontext.Provider>

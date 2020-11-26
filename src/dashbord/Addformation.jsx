@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { dashcontext } from '../ContextApi/formation crud/Datacenter1'
 import './AddForm.css'
 export default function Addformation(props) {
@@ -19,9 +20,10 @@ export default function Addformation(props) {
     }
     return (
         <div className='container '>
-    <div className='row'>
-        <div className="form-group col-md-6 offset-3 Title">
+    <div className='row offset-3'>
+        <div className="form-group col-md-6  Title">
 
+        
         <h2 className="form-group  ml-10">Ajouter Une Formation </h2>
      
      <label/>Ecole,Université ou Centre de formation:
@@ -48,6 +50,7 @@ export default function Addformation(props) {
       <th style={{fontSize:12}} scope="col">Date d'entre</th>
       <th style={{fontSize:12}} scope="col">Date de sortie</th>
       <th style={{fontSize:12}} scope="col">Diplome</th>
+      <th style={{fontSize:12}} scope="col">Modifier</th>
       <th style={{fontSize:12}} scope="col">Supprimer</th>
    </tr>
   </thead>
@@ -60,7 +63,9 @@ export default function Addformation(props) {
             <td>{forma.datedentrer}</td>
             <td>{forma.datedsortie}</td>
             <td>{forma.Diplome}</td>
-            <td onClick={Sendtofire.bind(this,forma.id)} className='btn btn-danger text-center form-control'>X</td>
+            
+          <td><Link to={'/update/'+forma.id}  className='btn btn-warning'>Update</Link></td>
+          <td onClick={Sendtofire.bind(this,forma.id)} className='btn btn-danger text-center form-control'>X</td>
           </tr>
          </tbody>
           )) }
@@ -69,3 +74,13 @@ export default function Addformation(props) {
   </div>
     )
 }
+
+ 
+
+
+
+
+
+
+
+
