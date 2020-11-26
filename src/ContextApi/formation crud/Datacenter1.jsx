@@ -1,6 +1,6 @@
 import React, { createContext } from 'react'
 export const dashcontext=createContext()
-export  function Dashbord(props) {
+export  function Datacenter1 (props) {
     return (
         <div>
             

@@ -3,22 +3,20 @@ import 'firebase/storage'
 import 'firebase/auth'
 
 
-
-var firebaseConfig = {
-    apiKey: "AIzaSyCb6TNFYoDB8TAHtC9nMX6syjG7mTNSI4k",
-    authDomain: "app-cv-9a93d.firebaseapp.com",
-    databaseURL: "https://app-cv-9a93d.firebaseio.com",
-    projectId: "app-cv-9a93d",
-    storageBucket: "app-cv-9a93d.appspot.com",
-    messagingSenderId: "193963867896",
-    appId: "1:193963867896:web:980fc2f2c9c63c4852450d"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+var config = {
+  apiKey: "AIzaSyBDKiNfeunrQlCH8XHc4YUgiB8rAmNzz60",
+    authDomain: "comptencemanager.firebaseapp.com",
+    databaseURL: "https://comptencemanager.firebaseio.com",
+    projectId: "comptencemanager",
+    storageBucket: "comptencemanager.appspot.com",
+    messagingSenderId: "393322206886",
+    appId: "1:393322206886:web:9ee2eb532dbb3e307d8667"
+};
+// Initialize Firebase
+const store = firebase.initializeApp(config);
   
-
-  const store = firebase.initializeApp(firebaseConfig);
-  const db = store.firestore();
-  export { db };
+// const store = !firebase.apps.length ? firebase.initializeApp(config) :
+//  firebase.app();
+  export const db = store.firestore();
   export const storage = firebase.storage();
   export const app=store.auth()
