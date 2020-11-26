@@ -18,9 +18,9 @@ export default function Addformation(props) {
     deletefromFirebase(id)
     }
     return (
-        <div className='container'>
+        <div className='container '>
     <div className='row'>
-        <div className="form-group col-md-6 offset-3 losire">
+        <div className="form-group col-md-6 offset-3 Title">
 
         <h2 className="form-group  ml-10">Ajouter Une Formation </h2>
      
@@ -36,19 +36,19 @@ export default function Addformation(props) {
      <input  onChange={handlInput} name='datedsortie' type="date" className="form-control" /> 
      <label/>Diplome obtenu
      <input  onChange={handlInput} name='Diplome' type="text" className="form-control " />
-     <button onClick={SendToparent} className="btn btn-primary float-right">ADD NEW</button>
+     <button onClick={SendToparent} style={{backgroundColor:'#119F16' ,color:'white'}} className="btn mt-2 mb-2   float-right">Ajouter</button>
      </div>
      </div>
      <div className='row  tab'>
     <table className="table table-sm col-md-8 offset-3">
        <thead class="thead-dark">
     <tr>
-      <th scope="col">Ecole,Université ou Centre de formation</th>
-      <th scope="col">Nomber d'année</th>
-      <th scope="col">Date d'entre</th>
-      <th scope="col">Date de sortie</th>
-      <th scope="col">Diplome</th>
-      <th scope="col">Supprimer</th>
+      <th style={{fontSize:12}} scope="col">Ecole,Université ou Centre de formation</th>
+      <th style={{fontSize:12}} scope="col">Nomber d'année</th>
+      <th style={{fontSize:12}} scope="col">Date d'entre</th>
+      <th style={{fontSize:12}} scope="col">Date de sortie</th>
+      <th style={{fontSize:12}} scope="col">Diplome</th>
+      <th style={{fontSize:12}} scope="col">Supprimer</th>
    </tr>
   </thead>
   {formations.map(forma=>(

@@ -41,6 +41,7 @@ function App() {
            <Route exact path="/Addprofile" component={Addprofile}/> 
            <Route exact path="/AddCompetence" component={AddCompetence}/> 
            <Route exact path="/Langue" component={Langue}/> 
+           
            </Switch>
         </Router>
         </Datacenter5>
