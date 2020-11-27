@@ -123,17 +123,17 @@ li,ul{
     width: 100%;
 }
 
-.user input {
-    /* background: rgba(0, 0, 0, 0) url("../images/user.png") no-repeat scroll 7px 12px; */
+/* .user input {
+     background: rgba(0, 0, 0, 0) url("../images/user.png") no-repeat scroll 7px 12px; 
 }
 
 .pass input {
-    /* background: rgba(0, 0, 0, 0) url("../images/password.png") no-repeat scroll 7px 12px; */
+     background: rgba(0, 0, 0, 0) url("../images/password.png") no-repeat scroll 7px 12px; 
 }
 
 .mail input {
-    /* background: rgba(0, 0, 0, 0) url("../images/mail.png") no-repeat scroll 4px 12px; */
-}
+     background: rgba(0, 0, 0, 0) url("../images/mail.png") no-repeat scroll 4px 12px; 
+} */
 
 .login-signup .tab-content {
     background: #ffffff none repeat scroll 0 0;
@@ -233,19 +233,20 @@ li,ul{
     transition: all 0.5s ease;
 }
 
-#wrapper.toggled {
+/* #wrapper.toggled {
     padding-left: 250px;
-}
+} */
 
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
     left: 250px;
     width: 0;
+    top:0;
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: rgb(131,58,180); 
+    background: rgb(131,58,180);
     background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 0%, rgba(12,8,1,1) 71%);
     transition: all 0.5s ease;
 }
@@ -499,5 +500,28 @@ li,ul{
     #wrapper.toggled #page-content-wrapper {
         position: relative;
         margin-right: 0;
+ 
     }
+.bodyex{
+    background-color: rgb(167, 200, 202);
+    box-sizing: border-box;
+    box-shadow:10px 10px 10px rgb(26, 121, 121);
+   
+   
+}
 
+.inif{
+    padding: 18px;
+     
+}
+.ulist{
+    list-style: none;
+}
+.ulist .lite:before {
+    content: "\25BA \0020";
+    color: purple;
+}
+.tit{
+    border:1px solid rgb(127, 175, 242);
+    box-shadow:10px 10px 10px rgb(26, 121, 121)
+}

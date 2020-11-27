@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react'
-import { db } from '../../Firebase/configs';
+import { db } from '../../firebase/Config';
 
 
 export const Context3=createContext()

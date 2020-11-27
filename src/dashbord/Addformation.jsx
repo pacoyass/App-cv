@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { dashcontext } from '../ContextApi/formation crud/Datacenter1'
-import './AddForm.css'
+import './Addformation.scoped.css'
 export default function Addformation(props) {
   const {formations,addformation,deletefromFirebase}=useContext(dashcontext)
   const [formation,setformation]=useState({})

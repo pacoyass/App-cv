@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { Context3 } from '../ContextApi/compétence crud/Datacenter3';
-import './Dash.css';
+import './AddCompetence.scoped.css';
 
 export  function AddCompetence(props){
   

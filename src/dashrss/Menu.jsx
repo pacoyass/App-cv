@@ -12,7 +12,7 @@ export default function Menu() {
       <div className="bg-light border-right " id="sidebar-wrapper">
         <div className="sidebar-heading">Start Bootstrap </div>
         <div className="list-group list-group-flush ">
-          <a href="/Addprofile" className="list-group-item list-group-item-action bg-light">Dashboard</a>
+          <a href="/" className="list-group-item list-group-item-action bg-light">Dashboard</a>
           <a href="#" className="list-group-item list-group-item-action bg-light">Add </a>
           <a href="#" className="list-group-item list-group-item-action bg-light">Overview</a>
           <a href="#" className="list-group-item list-group-item-action bg-light">Events</a>

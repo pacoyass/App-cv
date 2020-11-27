@@ -1,3 +1,4 @@
+import React,{useContext,useState,useEffect} from 'react';
 // import React from 'react';
 // import './Dash.css';
  
@@ -26,10 +27,12 @@
         
     
        
-import './Dash.css'
+import './Menu.scoped.css'
 // import { Grid, Cell } from 'react-mdl';
 import { Link } from 'react-router-dom';
+import { procontext } from '../ContextApi/profile crud/Dataprof';
 export default function Menu() {
+  
     return (
       
       
@@ -38,9 +41,9 @@ export default function Menu() {
       <div id="sidebar-wrapper">
         <ul className="sidebar-nav">
           <li className="sidebar-brand">
-            <a href="#">
-             Show Cv
-            </a>
+          <Link to="/showcv"> Show Cv</Link>
+            
+            
           </li>
           <li>
             <Link to="/">Dashboard</Link>
@@ -56,7 +59,9 @@ export default function Menu() {
             <Link to="/Addloisir">Add Loisirs</Link>
           </li>
           <li>
+   
             <Link to="/Addprofile">Add Profile</Link>
+           
           </li>
           <li>
             <Link to="/AddCompetence">Add Competence</Link>
