@@ -42,34 +42,64 @@ export default function Addformation(props) {
      </div>
      </div>
      <div className='row  tab'>
-    <table className="table table-sm col-md-8 offset-3">
-       <thead class="thead-dark">
-    <tr>
-      <th style={{fontSize:12}} scope="col">Ecole,Université ou Centre de formation</th>
-      <th style={{fontSize:12}} scope="col">Nomber d'année</th>
-      <th style={{fontSize:12}} scope="col">Date d'entre</th>
-      <th style={{fontSize:12}} scope="col">Date de sortie</th>
-      <th style={{fontSize:12}} scope="col">Diplome</th>
-      <th style={{fontSize:12}} scope="col"></th>
-      {/* <th style={{fontSize:12}} scope="col">Supprimer</th> */}
-   </tr>
-  </thead>
+
   {formations.map(forma=>(
-        <tbody>
-          <tr>
-            {/* <th scope="row"></th> */}
-            <td>{forma.titre}</td>
-            <td>{forma.nomber}</td>
-            <td>{forma.datedentrer}</td>
-            <td>{forma.datedsortie}</td>
-            <td>{forma.Diplome}</td>
-            
-          <td style={{width:100,}}  className='btn btn-warning text-center form-control<'><Link  style={{ color:'white'}} to={'/updateformation/'+forma.id} >Modifier</Link></td>
-          <td style={{width:100}} onClick={Sendtofire.bind(this,forma.id)} className='btn btn-danger text-center form-control'>Supprimer</td>
-          </tr>
-         </tbody>
+        
+        <div className="col-md-7 offset-3">
+        <div className="card mb-5">
+          <div className="card-body">
+            <div className="row">
+              <div className="col-sm-3 ">
+                <h6 className="mb-0">Ecole,Université ou Centre de formation</h6>
+              </div>
+              <div className="col-sm-9  text-secondary text-center">
+              {forma.titre}
+              </div>
+            </div>
+            <hr />
+            <div className="row">
+              <div className="col-sm-3">
+                <h6 className="mb-0">Nomber d'année</h6>
+              </div>
+              <div className="col-sm-9 text-secondary text-center">
+              {forma.nomber}
+              </div>
+            </div>
+            <hr />
+            <div className="row">
+              <div className="col-sm-3">
+                <h6 className="mb-0">Date d'entre</h6>
+              </div>
+              <div className="col-sm-9 text-secondary text-center">
+              {forma.datedentrer}
+              </div>
+            </div>
+            <hr />
+            <div className="row">
+              <div className="col-sm-3">
+                <h6 className="mb-0">Date de sortie</h6>
+              </div>
+              <div className="col-sm-9 text-secondary text-center">
+              {forma.datedsortie}
+              </div>
+            </div>
+            <hr />
+            <div className="row">
+              <div className="col-sm-3">
+                <h6 className="mb-0">Diplome</h6>
+              </div>
+              <div className="col-sm-9 text-secondary text-center">
+              {forma.Diplome}
+              </div>
+            </div>
+            <button style={{width:100,}}  className='btn btn-warning text-center form-control mt-2'><Link  style={{ color:'white'}} to={'/updateformation/'+forma.id} >Modifier</Link></button>
+          <button style={   {width:100}} onClick={Sendtofire.bind(this,forma.id)} className='btn btn-danger mt-2 text-center form-control float-right'>Supprimer</button>
+          </div>
+        </div>
+      </div>
+  
           )) }
-      </table>
+      {/* </table> */}
   </div>
   </div>
     )

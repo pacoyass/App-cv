@@ -28,15 +28,16 @@ function SendToData(id){
              <div className='row'>
              <div className="form-group col-md-6 offset-3">
              <h2 className="form-group  ml-10">Ajouter Une Langue </h2>
-            <label/>Ajoutez Une Langue
+            <label/>Ajoutez Une Langue :
      <input  onChange={handlInput} name='titre' type="text" className="form-control" />
+     <label/>Selectionnez votre Niveu :
         <select onChange={handlInput} name='language'  className="browser-default custom-select">
         <option selected>Choisissez votre Niveau</option>
         <option value='Notion de base'>Notion de base</option>
         <option value='Moyen'>Moyen</option>
         <option value='Execellent'>Execellent</option>
       </select>
-      <button onClick={SendtoParent} className="btn btn-primary float-right">ADD NEW</button>
+      <button onClick={SendtoParent} className="btn btn-primary float-right mt-2">Ajouter</button>
       </div>
       </div>
   
