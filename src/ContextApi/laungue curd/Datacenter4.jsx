@@ -2,6 +2,7 @@ import React, { createContext, useEffect, useState } from 'react'
 import {db} from '../../firebase/Config'
 export const langContext=createContext()
 export default function Datacenter4(props) {
+    
    const [langues,setlangues]=useState([])
    useEffect(() => {
     function fetchData(){

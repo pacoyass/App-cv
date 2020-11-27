@@ -1,9 +1,9 @@
 import React, {  useContext, useState, } from 'react'
 import 'react-datepicker/dist/react-datepicker.css'
 import DatePicker from 'react-datepicker'
-import '../dashbord/Dash.css'
+import './AddExperience.scoped.css'
 import { Context2 } from '../ContextApi/experience crud/Datacenter2'
-
+import moment from 'moment'
 
 
 
@@ -29,7 +29,7 @@ export default function AddExperience(props) {
         description:exper.description,
         specialiter:exper.specialiter,
      })
-     props.history.push('/')
+     props.history.push('/Addexperience')
   }
   // const dateString =new Date(secdate).toDateString()
   // const date1String=new Date(sedat).toDateString()
@@ -106,8 +106,8 @@ export default function AddExperience(props) {
     <td>{index+1}</td>
     <td>{profile.competence}</td>
     <td> {profile.formation} </td>
-    <td>de {profile.date} </td>
-    <td>a {profile.dates} </td>
+    <td>{moment(profile.date).format('MM/yyyy')} </td>
+    <td>{moment(profile.dates).format('MM/yyyy')} </td>
     <td> {profile.description} </td>
     <td> {profile.specialiter} </td>
     </tr>

@@ -1,19 +1,26 @@
 import React,{useContext, useState} from 'react'
+import { Link } from 'react-router-dom'
 import { procontext } from '../ContextApi/profile crud/Dataprof'
-
+import {storage} from '../firebase/Config'
 
 export default function Addprofile(props) {
   const [profiles,setprofiles]=useState({})
-  const {senddata,profilees}=useContext(procontext)
+  const [Url,setUrl]=useState("")
+  const {senddata,profils}=useContext(procontext)
+  
+   
   function hndlinput(e){
+    
      setprofiles({
        ...profiles,
        [e.target.name]:e.target.value
      })
-  }
+  
 
+  }
 function senddt(){
-   senddata({
+   
+     senddata({
      nom:profiles.nom,
      prenom:profiles.prenom,
      dateofbirth:profiles.dateofbirth,
@@ -21,11 +28,39 @@ function senddt(){
      phone:profiles.phone,
      specialiter:profiles.specialiter,
      description:profiles.description,
+     image:Url,
      
    })
-   props.history.push('/')
-}
+  }
+   
+  
+ 
+function changeImage(e){
+  const img=e.target.files[0]
+  const uploadTask = storage.ref(`/image/${img.name}`).put(img)
+  uploadTask.on('state_changed', 
+  (snapShot) => {
+    //takes a snap shot of the process as it is happening
+    console.log(snapShot)
+  }, (err) => {
+    //catches the errors
+    console.log(err)
+  }, () => {
+    // gets the functions from storage refences the image storage in firebase by the children
+    // gets the download url then sets the image from firebase as the value for the imgUrl key:
+    storage.ref('image').child(img.name).getDownloadURL()
+     .then(fireBaseUrl => {
+      console.log(fireBaseUrl);
+      setUrl(fireBaseUrl)
+    
+    
+     })
+  })
+    
+  }
+
     return (
+      profils.length==0 ? ( 
         <div className="bodyex form-group container mr-4 w-80">
 
         <h1 className="form-group text-center ml-10">Add Profile :</h1>
@@ -33,39 +68,39 @@ function senddt(){
 
     <div className="form-group ">
       <label />Nom
-      <input name="nom" onChange={hndlinput} type="text" className="form-control" id="usr"/>
+      <input name="nom" onChange={hndlinput} type="text" className="form-control" id="usr" required/>
     </div>
     
     <div className="form-group">
       <label/>Prénom
-      <input  name="prenom" onChange={hndlinput} type="text" className="form-control" />
+      <input  name="prenom" onChange={hndlinput} type="text" className="form-control" required />
     </div>
     
     
     <div className="form-group">
       <label/>Date de naissance
-      <input name="dateofbirth" onChange={hndlinput}  type="date" className="form-control" />
+      <input name="dateofbirth" onChange={hndlinput}  type="date" className="form-control" required />
     </div>
     
     
     <div className="form-group">
       <label/>Email
-      <input name="email" onChange={hndlinput}  type="email" className="form-control " />
+      <input name="email" onChange={hndlinput} type="email" className="form-control "required />
     
     </div>
     <div className="form-group">
       <label/>Téléphone
-      <input name="phone" onChange={hndlinput}  type="text" className="form-control " />
+      <input name="phone" onChange={hndlinput}  type="text" className="form-control " required />
     
     </div>
     <div className="form-group">
       <label/>Spécialité
-      <input name="specialiter" onChange={hndlinput}  type="text" className="form-control " />
+      <input name="specialiter" onChange={hndlinput}  type="text" className="form-control " required />
     
     </div>
     <div className="form-group">
       <label/>Description
-      <textarea name="description" onChange={hndlinput}  className="form-control " />
+      <textarea name="description" onChange={hndlinput}  className="form-control " required />
     
     </div>
     <div className="col-md-6 mb-4">
@@ -77,7 +112,7 @@ function senddt(){
             <div className="d-flex justify-content-center">
               <div className="  form-group">
                
-                <input onChange={hndlinput}  className="form-control " type="file" />
+                <input name="image"  onChange={changeImage}  className="form-control " type="file" required />
               </div>
             </div>
           </div>
@@ -103,7 +138,7 @@ function senddt(){
     </tr>
   </thead>
   <tbody>
-    {profilees.map((profile,index)=>(
+    {profils.map((profile,index)=>(
     <tr>
     <td>{index+1}</td>
     <td>{profile.nom}{profile.prenom}</td>
@@ -112,6 +147,7 @@ function senddt(){
     <td>{profile.phone} </td>
     <td> {profile.specialiter} </td>
     <td> {profile.description} </td>
+    <td><img src={profile.image} alt=""/></td>
     
     </tr>
     ))}
@@ -120,5 +156,13 @@ function senddt(){
 </table>
     
        </div>
+       ):
+       <div className="form-group ">
+
+         {profils.map(data=>(
+         <Link to={"updateprof/"+data.id} className="btn btn-warning form-control mt-5">update profile</Link>
+         ))}
+         
+       </div>
     )
-}
+    }

@@ -26,7 +26,8 @@ export  function Datacenter2(props) {
       }, []);
        
        function getdt(data){
-         // console.log(data);
+         // console.log(data)
+         setprofil([...profil,data])
        db.collection('experience').add(data);
        }
 
