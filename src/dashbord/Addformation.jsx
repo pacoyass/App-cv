@@ -50,8 +50,8 @@ export default function Addformation(props) {
       <th style={{fontSize:12}} scope="col">Date d'entre</th>
       <th style={{fontSize:12}} scope="col">Date de sortie</th>
       <th style={{fontSize:12}} scope="col">Diplome</th>
-      <th style={{fontSize:12}} scope="col">Modifier</th>
-      <th style={{fontSize:12}} scope="col">Supprimer</th>
+      <th style={{fontSize:12}} scope="col"></th>
+      {/* <th style={{fontSize:12}} scope="col">Supprimer</th> */}
    </tr>
   </thead>
   {formations.map(forma=>(
@@ -64,8 +64,8 @@ export default function Addformation(props) {
             <td>{forma.datedsortie}</td>
             <td>{forma.Diplome}</td>
             
-          <td><Link to={'/update/'+forma.id}  className='btn btn-warning'>Update</Link></td>
-          <td onClick={Sendtofire.bind(this,forma.id)} className='btn btn-danger text-center form-control'>X</td>
+          <td style={{width:100,}}  className='btn btn-warning text-center form-control<'><Link  style={{ color:'white'}} to={'/updateformation/'+forma.id} >Modifier</Link></td>
+          <td style={{width:100}} onClick={Sendtofire.bind(this,forma.id)} className='btn btn-danger text-center form-control'>Supprimer</td>
           </tr>
          </tbody>
           )) }

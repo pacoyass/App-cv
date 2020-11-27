@@ -26,13 +26,15 @@ useEffect(() => {
        function deletelanguage(id){
         db.collection('loisirs').doc(id).delete()
     }
-
+    function updadateloisir(id,user){
+        db.collection('loisirs').doc(id).update(user)
+    }
 
     return (
         <div>
             <loisContext.Provider value={{loisirs,
                 addloisir,
-                deletelanguage}}>
+                deletelanguage,updadateloisir}}>
             {props.children}
             </loisContext.Provider>
         </div>

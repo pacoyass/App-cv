@@ -1,4 +1,5 @@
 import React, {useContext, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import { langContext } from '../ContextApi/laungue curd/Datacenter4'
 
@@ -39,22 +40,39 @@ function SendToData(id){
       </div>
       </div>
   
-      {langues.map(forma=>(
-      <div className="card text-center  col-md-6 offset-3">
-        <div className="card-header">
-          Language
-        </div>
-       
-        <div className="card-body  ">
-          <h3 className="card-title">langue :{forma.titre} </h3>
-          <h6 className="card-text">Niveau :{forma.language}</h6>
-          <td onClick={SendToData.bind(this,forma.id)} className='btn btn-danger text-center form-control'>X</td>
-   
-        </div>
-          
-              </div>
-              )) }
+     
       </div>
+      <div className='row  tab'>
+    <table className="table table-sm col-md-8 offset-3">
+       <thead class="thead-dark">
+    <tr>
+      <th style={{fontSize:12}} scope="col">langue :</th>
+      <th style={{fontSize:12}} scope="col">Niveau :</th>
+      
+     
+      {/* <th style={{fontSize:12}} scope="col">Supprimer</th> */}
+   </tr>
+  </thead>
+  {langues.map(forma=>(
+        <tbody>
+          <tr>
+            {/* <th scope="row"></th> */}
+            <td>{forma.titre}</td>
+            <td>{forma.language}</td>
+            
+            
+           
+ 
+          </tr>
+         
+         <ul>
+           <li style={{width:100,}}  className='btn btn-warning text-center form-control'><Link style={{ color:'white'}} to={'/updatelangue/'+forma.id} >Modifier</Link></li>
+           <li style={{width:100}} onClick={SendToData.bind(this,forma.id)} className='btn btn-danger text-center form-control float-right'>Supprimer</li>
+           </ul>
+         </tbody>
+          )) }
+      </table>
+  </div>
       </div>
 
 

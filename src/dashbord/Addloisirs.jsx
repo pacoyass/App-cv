@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { loisContext } from '../ContextApi/loisir crud/Datacenter5'
 export default function Addloisirs() {
    const {loisirs,addloisir,deletelanguage}=useContext(loisContext)
@@ -34,7 +35,11 @@ export default function Addloisirs() {
           <h3 className="card-title">Loisires : </h3>
           {loisirs.map(forma=>(
           <ul className="list-group list-group-flush">
-           <li className="list-group-item">{forma.loisrie}<button onClick={SendToData.bind(this,forma.id)}  type="submit" className="form-control bg-danger" >X</button></li>
+           
+           <li className="list-group-item">{forma.loisrie}</li>
+           
+          <li> <button onClick={SendToData.bind(this,forma.id)}  type="submit" className="form-control bg-danger" >X</button></li>
+           <li style={{width:100,}}  className='btn btn-warning text-center form-control<'><Link  style={{ color:'white'}} to={'/updateloisir/'+forma.id} >Modifier</Link></li>
             </ul>
              )) }
              </div>

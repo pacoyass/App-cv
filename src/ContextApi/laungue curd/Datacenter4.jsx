@@ -27,11 +27,15 @@ db.collection('languages').add(langue)
    function deletelanguage(id){
        db.collection('languages').doc(id).delete()
    }
+   function updadatelang(id,user){
+    db.collection('languages').doc(id).update(user)
+}
+
     return (
         <div>
             <langContext.Provider value={{langues,
                 addlanguage,
-                deletelanguage}}>
+                deletelanguage,updadatelang}}>
             {props.children}
             </langContext.Provider>
         </div>
